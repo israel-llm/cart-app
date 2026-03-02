@@ -3,7 +3,7 @@
 <app-catalog [products]="products" (productAddEventEmitter)="onAddCart($event)"/>
 
 @if (items.length > 0){
-  <app-cart [items]="items"/>
+  <app-cart class="my-3" [items]="items" (idProductEventEmitter)="onDeleteCart($event)"/>
 } @else {
   <div class="alert alert-warning my-3">No hay elementos en el carro!</div>
 }
